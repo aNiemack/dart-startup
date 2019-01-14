@@ -5,4 +5,4 @@ RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive apt-get 
   libnetcdff-dev \
   netcdf-bin \
   gfortran \
-
+  csh 
