@@ -1,6 +1,6 @@
 FROM debian:latest
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get upgrade && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   git \ 
   libnetcdff-dev \
   netcdf-bin \
