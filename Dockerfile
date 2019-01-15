@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get update 
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   git \ 
