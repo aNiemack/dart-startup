@@ -1,9 +1,5 @@
 FROM debian:latest
 
-ADD https://get.aquasec.com/microscanner .
-RUN chmod +x microscanner
-RUN ./microscanner YzcyMmEyOWE4NzEw
-
 RUN apt-get update 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
@@ -16,3 +12,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   gfortran \
   csh \
   make
+
+ADD https://get.aquasec.com/microscanner .
+RUN chmod +x microscanner
+RUN ./microscanner YzcyMmEyOWE4NzEw
