@@ -1,8 +1,13 @@
 FROM debian:latest
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN apt-get update 
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   git \ 
   libnetcdff-dev \
+  libnetcdf-dev \
   netcdf-bin \
   gfortran \
   csh \
