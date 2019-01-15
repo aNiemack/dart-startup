@@ -1,5 +1,9 @@
 FROM debian:latest
 
+ADD https://get.aquasec.com/microscanner .
+RUN chmod +x microscanner
+RUN ./microscanner YzcyMmEyOWE4NzEw
+
 RUN apt-get update 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
